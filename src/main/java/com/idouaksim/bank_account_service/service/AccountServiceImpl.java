@@ -3,6 +3,7 @@ package com.idouaksim.bank_account_service.service;
 import com.idouaksim.bank_account_service.dto.BankAccountRequestDTO;
 import com.idouaksim.bank_account_service.dto.BankAccountResponseDTO;
 import com.idouaksim.bank_account_service.entities.BankAccount;
+import com.idouaksim.bank_account_service.mappers.AccountMapper;
 import com.idouaksim.bank_account_service.repositories.BankAccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,6 +18,8 @@ public class AccountServiceImpl implements AccountService {
 
     @Autowired
     private BankAccountRepository bankAccountRepository;
+    @Autowired
+    private AccountMapper accountMapper;
 
     @Override
     public BankAccountResponseDTO addAccount(BankAccountRequestDTO bankAccountDTO) {
@@ -27,15 +30,7 @@ public class AccountServiceImpl implements AccountService {
                 .type(bankAccountDTO.getType())
                 .build();
         BankAccount saveBankAccount = bankAccountRepository.save(bankAccount);
-
-        BankAccountResponseDTO  bankAccountResponseDTO =BankAccountResponseDTO.builder()
-                .id(saveBankAccount.getId())
-                .type(saveBankAccount.getType())
-                .createdAt(saveBankAccount.getCreatedAt())
-                .currency(saveBankAccount.getCurrency())
-                .balance(saveBankAccount.getBalance())
-                .build();
-
+        BankAccountResponseDTO bankAccountResponseDTO=accountMapper.fromBankAccount(saveBankAccount);
             return bankAccountResponseDTO;
     }
 }
