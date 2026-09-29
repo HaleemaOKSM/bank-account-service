@@ -6,3 +6,6 @@ web rest controller
 
 swagger
 ![img_2.png](img_2.png)
+
+graphql integration
+![img_3.png](img_3.png)
