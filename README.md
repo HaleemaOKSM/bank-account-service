@@ -15,3 +15,6 @@ accounts list
 
 find by id 
 ![img_5.png](img_5.png)
+
+Exception handler
+![img_6.png](img_6.png)
