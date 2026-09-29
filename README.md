@@ -9,3 +9,9 @@ swagger
 
 graphql integration
 ![img_3.png](img_3.png)
+
+accounts list
+![img_4.png](img_4.png)
+
+find by id 
+![img_5.png](img_5.png)
