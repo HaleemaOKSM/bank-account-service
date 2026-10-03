@@ -24,3 +24,9 @@ mutation
 
 delete
 ![img_8.png](img_8.png)
+
+Customer
+![img_9.png](img_9.png)
+
+GraphQL customers manipulation
+![img_10.png](img_10.png)
