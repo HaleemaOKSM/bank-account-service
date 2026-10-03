@@ -21,3 +21,6 @@ Exception handler
 
 mutation
 ![img_7.png](img_7.png)
+
+delete
+![img_8.png](img_8.png)
